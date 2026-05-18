@@ -17,7 +17,7 @@ pipeline {
 			}
 		steps {
 			withSonarQubeEnv('sonar-qube-server'){
-			sh 'mvn sonar:sonar'
+			sh 'mvn sonar:sonar -Dsonar.organization=sq01-key -Dsonar.host.url=https://sonarcloud.io'
 	  			}
 	 		}
 		}
